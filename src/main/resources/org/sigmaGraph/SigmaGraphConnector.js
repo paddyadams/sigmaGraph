@@ -68,7 +68,7 @@ colourGraph = function(sigmaG,toKeep){
       });
 	
 	sigmaG.graph.edges().forEach(function(e) {
-        if (toKeep[e.source] || toKeep[e.target])
+        if (toKeep[e.source] && toKeep[e.target])
           e.color = e.originalColor;
         else
           e.color = '#eee';
@@ -88,7 +88,7 @@ storeOriginalColours = function(sigmaF){
 sigma.classes.graph.addMethod('neighbours', function(nodeId) {
     var k,
         neighbours = {},
-        index = this.allNeighboursIndex[nodeId] || {};
+        index = this.allNeighborsIndex[nodeId] || {};
 
     for (k in index)
       neighbours[k] = this.nodesIndex[k];

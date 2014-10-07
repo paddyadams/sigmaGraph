@@ -15,7 +15,7 @@ import com.vaadin.ui.AbstractJavaScriptComponent;
 import com.vaadin.ui.JavaScriptFunction;
 
 @SuppressWarnings("serial")
-@JavaScript({"sigma.min.js","SigmaGraphConnector.js","sigma.layout.forceAtlas2.min.js","sigma.plugins.dragNodes.min.js"})
+@JavaScript({"sigma.min.js","SigmaGraphConnector.js","sigma.layout.forceAtlas2.min.js","sigma.plugins.neighborhoods.min.js"})
 public class SigmaGraph extends AbstractJavaScriptComponent {
 	
 	private List<ClickNodeListener> clickNodeListeners = new ArrayList<ClickNodeListener>();
@@ -48,6 +48,7 @@ public class SigmaGraph extends AbstractJavaScriptComponent {
 	
 	public void addNode(Node node){
 		getState().theGraph.nodes.add(node);
+		
 	}
 	
 	public void addEdge(Edge edge){

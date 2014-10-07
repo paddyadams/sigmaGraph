@@ -6,10 +6,10 @@ Features
 -----------------
 * Callbacks when nodes are clicked.
 * Supports the Force Atlas 2 layout algorithm
-* Selection modes: Nonselectable, and node only select implemented.
+* Selection modes: Nonselectable, and node only select, and one hop select implemented.
 
 ToDo
 -----------------
 * Dragable nodes
-* One hop select and component select
+* Component select
 * Refresh after adding new nodes/edges
